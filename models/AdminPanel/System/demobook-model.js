@@ -11,8 +11,8 @@ const demoBookSchema = new mongoose.Schema(
     notes: { type: String, default: "", trim: true },
     status: {
       type: String,
-      enum: ["requested", "scheduled", "In Progress", "On Going", "Hold", "Cancelled", "Completed"],
-      default: "requested"
+      enum: ["Requested", "Scheduled", "In Progress", "On Going", "Hold", "Cancelled", "Completed"],
+      default: "Requested"
     }
   },
   { timestamps: true }

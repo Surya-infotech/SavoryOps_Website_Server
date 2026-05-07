@@ -11,5 +11,6 @@ systemRouter.post("/demobook", demoBookController.createDemoBook);
 systemRouter.get("/contactlead", authmiddleware, contactLeadController.getAllContactLeads);
 systemRouter.put("/contactlead/:contactId", authmiddleware, contactLeadController.updateContactLeadStatus);
 systemRouter.get("/demobook", authmiddleware, demoBookController.getAllDemoBooks);
+systemRouter.put("/demobook/:demoId", authmiddleware, demoBookController.updateDemoBookStatus);
 
 module.exports = systemRouter;
