@@ -13,6 +13,9 @@ const createContactLead = async (req, res) => {
 const getAllContactLeads = async (req, res) => {
   try {
     const leads = await ContactLead.find().sort({ createdAt: -1 });
+    if (!leads.length) {
+      return res.status(200).json({ message: "No contact lead found", leads: [] });
+    }
     return res.status(200).json({ message: "Contact leads fetched", leads });
   } catch (error) {
     console.log("Get contact leads error:", error);
