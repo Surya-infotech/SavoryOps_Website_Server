@@ -9,9 +9,9 @@ const contactLeadSchema = new mongoose.Schema(
     country: { type: String, default: "" },
     status: {
       type: String,
-      enum: ["requested", "In Progress", "On Going", "Hold", "Cancelled", "Completed"],
-      default: "requested"
-    }
+      enum: ["Requested", "In Progress", "On Going", "Hold", "Cancelled", "Completed"],
+      default: "Requested"
+    } 
   },
   { timestamps: true }
 );
