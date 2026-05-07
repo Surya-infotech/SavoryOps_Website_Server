@@ -34,7 +34,7 @@ app.get("/status", (_req, res) => {
 app.use("/general", userTypeRouter);
 app.use("/system", systemRouter);
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT;
 
 connectAdminDB()
   .then(() => {
