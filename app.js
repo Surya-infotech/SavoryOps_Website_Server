@@ -8,7 +8,7 @@ const { connectAdminDB } = require("./src/db");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5174", "http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5174", "http://localhost:5173", "https://grow.savoryops.com","https://sunshine.savoryops.com"];
 
 app.use(
   cors({
