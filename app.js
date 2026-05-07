@@ -1,7 +1,8 @@
 require("dotenv").config({ quiet: true });
 const express = require("express");
 const cors = require("cors");
-
+const crypto = require('crypto');
+global.crypto = require('crypto');
 const userTypeRouter = require("./router/usertype-router");
 const systemRouter = require("./router/AdminPanel/system-router");
 const { connectAdminDB } = require("./src/db");
