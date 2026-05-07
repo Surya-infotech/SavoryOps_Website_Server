@@ -27,8 +27,6 @@ const signinAdmin = async (req, res) => {
       token,
       admin: {
         _id: admin._id,
-        adminfirstname: admin.adminfirstname,
-        adminlastname: admin.adminlastname,
         email: admin.email
       }
     });
@@ -38,16 +36,4 @@ const signinAdmin = async (req, res) => {
   }
 };
 
-const verifyAdminToken = async (req, res) => {
-  return res.status(200).json({
-    message: "Token is valid",
-    admin: {
-      _id: req.admin._id,
-      adminfirstname: req.admin.adminfirstname,
-      adminlastname: req.admin.adminlastname,
-      email: req.admin.email
-    }
-  });
-};
-
-module.exports = { signinAdmin, verifyAdminToken };
+module.exports = { signinAdmin };
