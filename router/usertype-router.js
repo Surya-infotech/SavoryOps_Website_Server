@@ -1,9 +1,8 @@
 const express = require("express");
-const roleMiddleware = require("../middlewares/roleMiddleware");
 const adminController = require("../controllers/UserType/admin-controller");
 
 const userTypeRouter = express.Router();
 
-userTypeRouter.post("/admin/signin", roleMiddleware, adminController.signinAdmin);
+userTypeRouter.post("/admin/signin", adminController.signinAdmin);
 
 module.exports = userTypeRouter;
